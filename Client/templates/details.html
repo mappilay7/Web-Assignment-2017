@@ -1,0 +1,75 @@
+
+       
+    
+  
+
+
+
+
+
+<style>
+img {
+  
+    height: 200px;
+    width : 400px;
+}
+</style>
+
+
+
+<center>
+ <img class="thumbnail" src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}" width="500px" height="900px"/>
+       
+</center>
+<div class="line"></div>
+
+            
+    <div class="table-responisive">
+    <table class="table table-hover">
+
+
+
+        <tr><h2>Title: {{movie.title}} </h2></tr>
+
+
+        <tr><b><h3>Summary: {{ movie.overview }}  </h3></b></tr>
+
+
+          <tr><b><h3>Revenue: {{ movie.revenue }}</h3></b></tr>
+
+
+
+        <tr><b><h3>Date Released: {{ movie.release_date }}</h3></b></></tr>
+      
+
+
+        <tr><b><h3>Genre: {{  movie.original_language }} </b></h3></tr>
+
+
+
+
+
+        <tr><b></b><h3>Status: {{ movie.status }}</h3></b></b></tr>
+      
+     
+        
+    </table>
+    
+    </div>
+    <div class="line"></div>
+<h2>{{ message }}</h2>
+
+   <form method="post" href="hhttps://cinema-turbo7.c9users.io/movies/{{ id }}" style="text-align: right;">
+    <!--input type="hidden" name="id" value="{{ id }}" /-->
+    <input class="button button-border button-rounded button-amber" type="submit" name="like" ng-click="postLike(1)"  value="LIKE"  />
+    <input class="button button-border button-rounded button-amber" type="submit" name="like" ng-click="postLike(-1)" value="DISLIKE" />
+    </form>
+
+
+
+
+
+
+
+
+
